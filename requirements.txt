@@ -14,4 +14,4 @@ scipy==1.7.1
 setuptools==57.0.0
 Sphinx==4.4.0
 sympy==1.8
-tensorflow==2.6.1
+tensorflow==2.11.1

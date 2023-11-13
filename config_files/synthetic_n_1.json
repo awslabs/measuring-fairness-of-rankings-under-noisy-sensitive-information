@@ -1,0 +1,37 @@
+{
+ "worldview": 1,
+
+ "pipeline.variable2loop": "dataset.n",
+ "pipeline.values2loop": [100, 1000, 10000, 100000, 1000000],
+ "pipeline.variable2loop_name": "n",
+ "pipeline.num_exp": 10,
+
+ "baseline.sample_rate": 0.1,
+ "baseline.sample_weighting": "uniform",
+
+ "model.name": "flip",
+ "model.flip.g1_error_rate": 0.3,
+ "model.flip.g2_error_rate": 0.3,
+
+ "metric.name": "exposure",
+ "metric.rnd.ratio": 0.1,
+ "metric.exposure.dropoff": "ndcg_dropoff",
+
+ "dataset.type": "sim",
+ "dataset.n": 10000,
+ "dataset.s": 0.5,
+ "dataset.test_size": 0.2,
+
+ "dataset.gen": "normal",
+
+ "dataset.normal.mu_f": 1,
+ "dataset.normal.mu_m": 2,
+ "dataset.normal.sigma_f": 0.5,
+ "dataset.normal.sigma_m": 2,
+
+ "dataset.sensitive_att_name": "sex",
+ "dataset.sens_att_value": "1",
+ "dataset.non_sens_att_value": "0",
+ "dataset.score_field": "score",
+ "dataset.att_values_numeric": {"1": 1, "0":  0}
+}

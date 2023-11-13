@@ -1,0 +1,34 @@
+{
+ "worldview": 2,
+
+ "pipeline.variable2loop": "baseline.sample_rate",
+ "pipeline.values2loop": [0.1, 0.2, 0.3, 0.4],
+ "pipeline.variable2loop_name": "Sampling rate",
+ "pipeline.variable2loop_scale": "normal",
+ "pipeline.num_exp": 100,
+
+ "baseline.sample_rate": 0.1,
+ "baseline.sample_weighting": "weighted",
+ "baseline.bucket_size": 100,
+
+ "model.name": "RF",
+ "model.flip.g1_error_rate": 0.3,
+ "model.flip.g2_error_rate": 0.3,
+
+ "metric.name": "exposure",
+ "metric.rnd.ratio": 0.1,
+ "metric.exposure.dropoff": "ndcg_dropoff",
+
+ "dataset.type": "real",
+ "dataset.name": "hr",
+ "dataset.path": "hr.csv",
+ "dataset.test_size": 0.2,
+ "dataset.sensitive_att_name": "MaritalStatus",
+ "dataset.sens_att_value": "Single",
+ "dataset.non_sens_att_value": "Other",
+ "dataset.score_field": "YearsInCurrentRole",
+ "dataset.att_values_numeric": {"Single":  1, "Other":  0},
+
+ "feature.n": 2,
+ "feature.range": 6
+}

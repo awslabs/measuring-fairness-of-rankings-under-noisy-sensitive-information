@@ -1,0 +1,35 @@
+{
+ "worldview": 2,
+
+ "pipeline.variable2loop": "model.name",
+ "pipeline.values2loop": ["MLP", "RF", "SVM", "LR"],
+ "pipeline.variable2loop_name": "Model name",
+ "pipeline.variable2loop_scale": "normal",
+ "pipeline.num_exp": 10,
+ "pipeline.baseline": 1,
+
+ "baseline.sample_rate": 0.1,
+ "baseline.sample_weighting": "weighted",
+ "baseline.bucket_size": 100,
+
+ "model.name": "RF",
+ "model.flip.g1_error_rate": 0.3,
+ "model.flip.g2_error_rate": 0.3,
+
+ "metric.name": "exposure",
+ "metric.rnd.ratio": 0.1,
+ "metric.exposure.dropoff": "ndcg_dropoff",
+
+ "dataset.type": "real",
+ "dataset.name": "compas",
+ "dataset.path": "compas.csv",
+ "dataset.test_size": 0.2,
+ "dataset.sensitive_att_name": "Ethnic_Code_Text",
+ "dataset.sens_att_value": "African-American",
+ "dataset.non_sens_att_value": "Other",
+ "dataset.score_field": "ScoreText",
+ "dataset.att_values_numeric": {"African-American":  1, "Other":  0},
+
+ "feature.n": 2,
+ "feature.range": 6
+}

@@ -1,0 +1,32 @@
+{
+ "worldview": 1,
+
+ "pipeline.variable2loop": "pipeline.percent_queries",
+ "pipeline.values2loop": [0.1, 0.2, 0.3, 0.4, 0.5],
+ "pipeline.variable2loop_name": "",
+ "pipeline.variable2loop_scale": "normal",
+ "pipeline.num_exp": 10,
+ "pipeline.percent_queries": 0.1,
+
+
+ "model.name": "MLP",
+ "model.flip.g1_error_rate": 0.3,
+ "model.flip.g2_error_rate": 0.3,
+
+ "metric.name": "exposure",
+ "metric.rnd.ratio": 1,
+ "metric.exposure.dropoff": "ndcg_dropoff",
+
+ "dataset.type": "real",
+ "dataset.name": "tommy",
+ "dataset.path": "tommy.json",
+ "dataset.test_size": 0.2,
+ "dataset.sensitive_att_name": "gender",
+ "dataset.sens_att_value": "Women",
+ "dataset.non_sens_att_value": "Men",
+ "dataset.score_field": "score",
+ "dataset.att_values_numeric": {"Women":  1, "Men":  0},
+
+ "feature.n": 2,
+ "feature.range": 6
+}

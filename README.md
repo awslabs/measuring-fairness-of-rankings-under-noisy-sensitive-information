@@ -1,25 +1,22 @@
 # InclusiveSearchFairnessMeasurement
 
-** Describe InclusiveSearchFairnessMeasurement here **
+This is the code for a paper Measuring Fairness of Rankings under Noisy Sensitive Information by Ghazimatin, Azin and Kleindessner, Matthaus and Russell, Chris and Abedjan, Ziawasch and Golebiowski, Jacek. Published at FAccT '22
 
-## Documentation
 
-Generated documentation for the latest released version can be accessed here:
-https://devcentral.amazon.com/ac/brazil/package-master/package/go/documentation?name=InclusiveSearchFairnessMeasurement&interface=1.0&versionSet=live
 
-## Cradle Jobs
-Cradle scripts are ccurrently hed in the cradle directory. We have following cradle profiles implemented
-- [FairnessMeasurement] Measuring Fairness in ranking: Dataset generation - https://datacentral.a2z.com/cradle/#/Alster/profiles/3ee3f7c0-ae9d-4404-8e82-24ede71cc8bc - cradle/fairness_measurement_dataset.py
-  - This job can be used ot generate the data for fairness evaluation of Amazon search systems. Details in https://quip-amazon.com/kl9XAIzIwrj8/Measuring-Fairness-in-ranking
-  
-## Tesitng
-When running from code root, use `PYTHONPATH=$(pwd)/test:$(pwd)/src:$PYTHONPATH python test/path2test_file` to run tests with the appropriate paths.
-
-## CRADLE
-1. Build the egg package with `python setup.py bdist_egg`
-2. Find the egg file in `root/dist/InclusiveSearchFairnessMeasurement-1.0-{python-version}.egg`
-3. Go to your cradle profile -> EDIT -> Show advanced settings
-4. Use the Sideloaded Libraries dialog to upload thee egg build in p2. 
-
-###NOTE - dependencies
-If you are using nay additional libraries (e.g. numpy) you need to sideload the ZIP alongside your egg. For example the zip file for numpy can be downloaed from https://pypi.org/project/numpy/#files. Details in https://w.amazon.com/bin/view/BDT/Products/Cradle/Docs/PythonOnCradle/
+## Citing
+Please cite
+```
+@inproceedings{10.1145/3531146.3534641,
+author = {Ghazimatin, Azin and Kleindessner, Matthaus and Russell, Chris and Abedjan, Ziawasch and Golebiowski, Jacek},
+title = {Measuring Fairness of Rankings under Noisy Sensitive Information},
+year = {2022},
+url = {https://doi.org/10.1145/3531146.3534641},
+doi = {10.1145/3531146.3534641},
+booktitle = {Proceedings of the 2022 ACM Conference on Fairness, Accountability, and Transparency},
+pages = {2263–2279},
+numpages = {17},
+location = {Seoul, Republic of Korea},
+series = {FAccT '22}
+}
+```
